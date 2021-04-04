@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "kenny-lee-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Kenny Lee's personal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kenny Lee <kennyklee@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": ""
   },
   "dependencies": {
     "gatsby": "^3.2.1",
