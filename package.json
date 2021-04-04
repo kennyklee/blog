@@ -53,6 +53,6 @@
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "npm run build && rm -rf ./docs && mv ./public ./docs && git add . && git commit -m \"script: deploy and publish\" && git push"
+    "deploy": "npm run build && rm -rf ./docs && mv ./public ./docs && echo kennylee.com > ./docs/CNAME && git add . && git commit -m \"script: deploy and publish\" && git push"
   }
 }
