@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kenny Lee's personal blog]]></title><description><![CDATA[Kenny's personal thoughts.]]></description><link>https://kennylee.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Apr 2021 19:47:05 GMT</lastBuildDate><item><title><![CDATA[Learning React & Gatsby]]></title><description><![CDATA[I am relearning how to use React and Gatsby, starting with this blog.]]></description><link>https://kennylee.com/2020-04-01-learning-react-gatsby/</link><guid isPermaLink="false">https://kennylee.com/2020-04-01-learning-react-gatsby/</guid><pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I am relearning how to use React and Gatsby, starting with this blog.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[href attribute 'do nothing' trick]]></title><description><![CDATA[I learned this trick from Chris Coyier was speaking at Event Apart Seattle 2017. It’s a common practice to set the anchor element’s href to…]]></description><link>https://kennylee.com/2017-04-10-href-attribute-trick/</link><guid isPermaLink="false">https://kennylee.com/2017-04-10-href-attribute-trick/</guid><pubDate>Mon, 10 Apr 2017 00:13:21 GMT</pubDate><content:encoded>&lt;p&gt;I learned this trick from Chris Coyier was speaking at &lt;a href=&quot;https://aneventapart.com/event/seattle-2017#chris-coyier&quot;&gt;Event Apart Seattle 2017&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kenny Lee's personal blog]]></title><description><![CDATA[Kenny's personal thoughts.]]></description><link>https://kennylee.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Apr 2021 20:22:04 GMT</lastBuildDate><item><title><![CDATA[Learning React & Gatsby]]></title><description><![CDATA[I am relearning how to use React and Gatsby, starting with this blog.]]></description><link>https://kennylee.com/2020-04-01-learning-react-gatsby/</link><guid isPermaLink="false">https://kennylee.com/2020-04-01-learning-react-gatsby/</guid><pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I am relearning how to use React and Gatsby, starting with this blog.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[href attribute 'do nothing' trick]]></title><description><![CDATA[I learned this trick from Chris Coyier was speaking at Event Apart Seattle 2017. It’s a common practice to set the anchor element’s href to…]]></description><link>https://kennylee.com/2017-04-10-href-attribute-trick/</link><guid isPermaLink="false">https://kennylee.com/2017-04-10-href-attribute-trick/</guid><pubDate>Mon, 10 Apr 2017 00:13:21 GMT</pubDate><content:encoded>&lt;p&gt;I learned this trick from Chris Coyier was speaking at &lt;a href=&quot;https://aneventapart.com/event/seattle-2017#chris-coyier&quot;&gt;Event Apart Seattle 2017&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It’s a common practice to set the anchor element’s href to &lt;code class=&quot;language-text&quot;&gt;#&lt;/code&gt;, when you don’t want anything to happen when user click on the link.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;a href&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Click here&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;However, some browsers may jump (usually to the top of the page), when users click on it.&lt;/p&gt;
@@ -175,7 +175,7 @@ Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Mission 
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg&quot;
+    href=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -188,11 +188,11 @@ Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Mission 
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Image&quot;
         title=&quot;Image&quot;
-        src=&quot;/blog/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg&quot;
-        srcset=&quot;/blog/static/c237194c43f92ef837f7cc85fbaf1dff/ff44c/parkinglot.jpg 158w,
-/blog/static/c237194c43f92ef837f7cc85fbaf1dff/a6688/parkinglot.jpg 315w,
-/blog/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg 630w,
-/blog/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg 750w&quot;
+        src=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg&quot;
+        srcset=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/ff44c/parkinglot.jpg 158w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/a6688/parkinglot.jpg 315w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg 630w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg 750w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -265,7 +265,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
+    href=&quot;/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -278,10 +278,10 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;warcraft&quot;
         title=&quot;warcraft&quot;
-        src=&quot;/blog/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
-        srcset=&quot;/blog/static/bc7e321984355934486788cd1c7148ab/c26ae/1.png 158w,
-/blog/static/bc7e321984355934486788cd1c7148ab/6bdcf/1.png 315w,
-/blog/static/bc7e321984355934486788cd1c7148ab/72799/1.png 320w&quot;
+        src=&quot;/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
+        srcset=&quot;/static/bc7e321984355934486788cd1c7148ab/c26ae/1.png 158w,
+/static/bc7e321984355934486788cd1c7148ab/6bdcf/1.png 315w,
+/static/bc7e321984355934486788cd1c7148ab/72799/1.png 320w&quot;
         sizes=&quot;(max-width: 320px) 100vw, 320px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -296,7 +296,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg&quot;
+    href=&quot;/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -309,11 +309,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Pike&amp;#39;s Place&quot;
         title=&quot;Pike&amp;#39;s Place&quot;
-        src=&quot;/blog/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg&quot;
-        srcset=&quot;/blog/static/00b498122971b0500a67f7dd4e86b182/ff44c/2.jpg 158w,
-/blog/static/00b498122971b0500a67f7dd4e86b182/a6688/2.jpg 315w,
-/blog/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg 630w,
-/blog/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg 640w&quot;
+        src=&quot;/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg&quot;
+        srcset=&quot;/static/00b498122971b0500a67f7dd4e86b182/ff44c/2.jpg 158w,
+/static/00b498122971b0500a67f7dd4e86b182/a6688/2.jpg 315w,
+/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg 630w,
+/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -327,7 +327,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg&quot;
+    href=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -340,11 +340,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Volunteer Park&quot;
         title=&quot;Volunteer Park&quot;
-        src=&quot;/blog/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg&quot;
-        srcset=&quot;/blog/static/cf4a1377c5d09a9e82635110ef50e4be/ff44c/3.jpg 158w,
-/blog/static/cf4a1377c5d09a9e82635110ef50e4be/a6688/3.jpg 315w,
-/blog/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg 630w,
-/blog/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg 640w&quot;
+        src=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg&quot;
+        srcset=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/ff44c/3.jpg 158w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/a6688/3.jpg 315w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg 630w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -358,7 +358,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg&quot;
+    href=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -371,11 +371,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Space Needle&quot;
         title=&quot;Space Needle&quot;
-        src=&quot;/blog/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg&quot;
-        srcset=&quot;/blog/static/5223ca527ac8334e80ba2f741c1886cc/ff44c/4.jpg 158w,
-/blog/static/5223ca527ac8334e80ba2f741c1886cc/a6688/4.jpg 315w,
-/blog/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg 630w,
-/blog/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg 640w&quot;
+        src=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg&quot;
+        srcset=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/ff44c/4.jpg 158w,
+/static/5223ca527ac8334e80ba2f741c1886cc/a6688/4.jpg 315w,
+/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg 630w,
+/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -389,7 +389,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg&quot;
+    href=&quot;/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -402,11 +402,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Kerry Park&quot;
         title=&quot;Kerry Park&quot;
-        src=&quot;/blog/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg&quot;
-        srcset=&quot;/blog/static/01b83576fb90bff7d3c8876030ecee59/ff44c/5.jpg 158w,
-/blog/static/01b83576fb90bff7d3c8876030ecee59/a6688/5.jpg 315w,
-/blog/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg 630w,
-/blog/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg 640w&quot;
+        src=&quot;/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg&quot;
+        srcset=&quot;/static/01b83576fb90bff7d3c8876030ecee59/ff44c/5.jpg 158w,
+/static/01b83576fb90bff7d3c8876030ecee59/a6688/5.jpg 315w,
+/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg 630w,
+/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -420,7 +420,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
+    href=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -433,10 +433,10 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Space Needle Selfie&quot;
         title=&quot;Space Needle Selfie&quot;
-        src=&quot;/blog/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
-        srcset=&quot;/blog/static/afa9b7dcb518085d96a52d313d26ac55/ff44c/6.jpg 158w,
-/blog/static/afa9b7dcb518085d96a52d313d26ac55/a6688/6.jpg 315w,
-/blog/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg 383w&quot;
+        src=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
+        srcset=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/ff44c/6.jpg 158w,
+/static/afa9b7dcb518085d96a52d313d26ac55/a6688/6.jpg 315w,
+/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg 383w&quot;
         sizes=&quot;(max-width: 383px) 100vw, 383px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -450,7 +450,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg&quot;
+    href=&quot;/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -463,11 +463,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Grey&amp;#39;s Anatomy&quot;
         title=&quot;Grey&amp;#39;s Anatomy&quot;
-        src=&quot;/blog/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg&quot;
-        srcset=&quot;/blog/static/e1819848adac64a18d8983aa90c00127/ff44c/7.jpg 158w,
-/blog/static/e1819848adac64a18d8983aa90c00127/a6688/7.jpg 315w,
-/blog/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg 630w,
-/blog/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg 640w&quot;
+        src=&quot;/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg&quot;
+        srcset=&quot;/static/e1819848adac64a18d8983aa90c00127/ff44c/7.jpg 158w,
+/static/e1819848adac64a18d8983aa90c00127/a6688/7.jpg 315w,
+/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg 630w,
+/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -481,7 +481,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg&quot;
+    href=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -494,11 +494,11 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Breakfast&quot;
         title=&quot;Breakfast&quot;
-        src=&quot;/blog/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg&quot;
-        srcset=&quot;/blog/static/4e12b7540c04fb223a226ea0638e08ae/ff44c/8.jpg 158w,
-/blog/static/4e12b7540c04fb223a226ea0638e08ae/a6688/8.jpg 315w,
-/blog/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg 630w,
-/blog/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg 640w&quot;
+        src=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg&quot;
+        srcset=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/ff44c/8.jpg 158w,
+/static/4e12b7540c04fb223a226ea0638e08ae/a6688/8.jpg 315w,
+/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg 630w,
+/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg 640w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -512,7 +512,7 @@ Kenny&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
+    href=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -525,10 +525,10 @@ Kenny&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Another selfie&quot;
         title=&quot;Another selfie&quot;
-        src=&quot;/blog/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
-        srcset=&quot;/blog/static/7e717ac61afcfd3635a2b6adc016fa45/ff44c/9.jpg 158w,
-/blog/static/7e717ac61afcfd3635a2b6adc016fa45/a6688/9.jpg 315w,
-/blog/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg 384w&quot;
+        src=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
+        srcset=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/ff44c/9.jpg 158w,
+/static/7e717ac61afcfd3635a2b6adc016fa45/a6688/9.jpg 315w,
+/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg 384w&quot;
         sizes=&quot;(max-width: 384px) 100vw, 384px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
