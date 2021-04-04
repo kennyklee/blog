@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kenny Lee <kennyklee@gmail.com>",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/kennyklee/blog/issues"
   },
   "dependencies": {
     "gatsby": "^3.2.1",
