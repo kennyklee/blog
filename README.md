@@ -4,7 +4,11 @@ https://marcopeg.com/2019/free-website-with-gatsby-and-gitpod
 `npm run develop`
 
 `npm run build` # Create the public/docs to push to Github.
+
 `rm -rf ./docs && mv ./public ./docs` # rename to docs folder for Github publish
+
+Can't yet change the name of the [docs folder](https://github.community/t/can-i-define-a-custom-source-or-folder-from-which-my-site-hosted-on-github-pages-can-load-from/10237/13).
+
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
