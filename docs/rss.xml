@@ -1,313 +1,574 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kenny Lee's personal blog]]></title><description><![CDATA[Kenny's personal thoughts.]]></description><link>https://kennylee.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Apr 2021 07:18:12 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://kennylee.com/new-beginnings/</link><guid isPermaLink="false">https://kennylee.com/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
-&lt;h2&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kenny Lee's personal blog]]></title><description><![CDATA[Kenny's personal thoughts.]]></description><link>https://kennylee.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 04 Apr 2021 07:58:53 GMT</lastBuildDate><item><title><![CDATA[Learning React & Gatsby]]></title><description><![CDATA[I am relearning how to use React and Gatsby, starting with this blog.]]></description><link>https://kennylee.com/2020-04-01-learning-react-gatsby/</link><guid isPermaLink="false">https://kennylee.com/2020-04-01-learning-react-gatsby/</guid><pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I am relearning how to use React and Gatsby, starting with this blog.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[href attribute 'do nothing' trick]]></title><description><![CDATA[I learned this trick from Chris Coyier was speaking at Event Apart Seattle 2017. It’s a common practice to set the anchor element’s href to…]]></description><link>https://kennylee.com/2017-04-10-href-attribute-trick/</link><guid isPermaLink="false">https://kennylee.com/2017-04-10-href-attribute-trick/</guid><pubDate>Mon, 10 Apr 2017 00:13:21 GMT</pubDate><content:encoded>&lt;p&gt;I learned this trick from Chris Coyier was speaking at &lt;a href=&quot;https://aneventapart.com/event/seattle-2017#chris-coyier&quot;&gt;Event Apart Seattle 2017&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It’s a common practice to set the anchor element’s href to &lt;code class=&quot;language-text&quot;&gt;#&lt;/code&gt;, when you don’t want anything to happen when user click on the link.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;a href&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Click here&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;However, some browsers may jump (usually to the top of the page), when users click on it.&lt;/p&gt;
+&lt;p&gt;So, here is a cool trick…use &lt;code class=&quot;language-text&quot;&gt;#0&lt;/code&gt; instead.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;a href&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;#0&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Click here&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;a&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Since IDs almost never start with a 0, it just safely fails and do nothing…which is the desired behavior.&lt;/p&gt;
+&lt;p&gt;But, here is the catch…&lt;/p&gt;
+&lt;p&gt;What Chris said was that an ID cannot start with a number in &lt;strong&gt;&lt;em&gt;most cases&lt;/em&gt;&lt;/strong&gt;. The exception that he gave was related to unicode (which I won’t elaborate on).&lt;/p&gt;
+&lt;p&gt;After digging a little bit, it turn out that &lt;a href=&quot;https://www.w3.org/TR/html4/types.html#type-id&quot;&gt;HTML4 specs&lt;/a&gt; prevent IDs from starting with a number.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BUT…&lt;/strong&gt; &lt;a href=&quot;https://www.w3.org/TR/html5/dom.html#the-id-attribute&quot;&gt;HTML5 specs&lt;/a&gt; are cool with an ID starting with a number. &lt;strong&gt;BUT TO THE BUT…&lt;/strong&gt; it’s really not a common practice.&lt;/p&gt;
+&lt;h2&gt;So I think &lt;code class=&quot;language-text&quot;&gt;#0&lt;/code&gt; is just fine, and actually pretty cool. ;)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;Other variations:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;This however showed weasel&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Well uncritical so misled&lt;/p&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;a href=&amp;quot;#!&amp;quot;&amp;gt;Click here&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;a href=&amp;quot;#void&amp;quot;&amp;gt;Click here&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Came across using &lt;code class=&quot;language-text&quot;&gt;javascript:void(0)&lt;/code&gt; in &lt;a href=&quot;http://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0&quot;&gt;Stackoverflow&lt;/a&gt;, but that is some ugly code. I don’t wanna use it.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Duhig, Charles. Smarter Faster Better]]></title><description><![CDATA[Overall This book is not what I expected. I thought it was going to be another self-help, productivity book (which I seem to be addicted to…]]></description><link>https://kennylee.com/2016-06-01-book-smarter-faster-better/</link><guid isPermaLink="false">https://kennylee.com/2016-06-01-book-smarter-faster-better/</guid><pubDate>Thu, 02 Jun 2016 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Overall&lt;/h3&gt;
+&lt;p&gt;This book is not what I expected. I thought it was going to be another self-help, productivity book (which I seem to be addicted to).  Rather, it provides insights into human psychology, social dynamics, and observed techniques to maximize team effectiveness.  I enjoyed it more than I thought I would.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4/5 stars&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h3&gt;Personal Takeaway &amp;#x26; Application&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;this is very interesting&lt;/li&gt;
+&lt;li&gt;Company culture is #1 indicator of success.&lt;/li&gt;
+&lt;li&gt;Break tunnel vision by switching routines, employing different people/resources/techniques.  However, too drastic of a change can lead to unproductive and unfocused results.  Subtle and seemingly inconsequential changes can lead to breakthroughs.&lt;/li&gt;
+&lt;li&gt;When learning/reading about a topic, use it, talk about it, discuss it, and most importantly engage with the data.  Taking action (any kind of action) on the data will lead to stickiness, higher rate of absorption.&lt;/li&gt;
+&lt;li&gt;If you want a topic to stick, handwriting is more effective than typing.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
-view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
-&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.&lt;/p&gt;
-&lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
-&lt;h3&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
+&lt;h3&gt;Highlights&lt;/h3&gt;
+&lt;p&gt;Personal, management, and team effectiveness is explored in various work settings, i.e., Google, airplance crash, wartime, education, etc.&lt;/p&gt;
+&lt;p&gt;Tunnel focus is something I experienced on the basketball court in high school, which can lead to both positive and negative results.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stattrek.com/probability/bayes-theorem.aspx&quot;&gt;Bayes rule&lt;/a&gt; and power law is briefly discussed and supported by interesting examples, i.e., poker.&lt;/p&gt;
+&lt;p&gt;Innovation is taking disparate unoriginal ideas, and exploring alternate way of thinking from a different vantage point.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Misc Notes - Spelling / grammar mistakes included&lt;/h3&gt;
+&lt;p&gt;Manager Effectiveness (Google’s Oxygen Program)&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;So baboon this&lt;/li&gt;
-&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
-&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
-&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
-impassive fruitlessly shut&lt;/li&gt;
+&lt;li&gt;Good coach&lt;/li&gt;
+&lt;li&gt;Empowers and doesn’t Micromanage&lt;/li&gt;
+&lt;li&gt;Employee success &amp;#x26; well being&lt;/li&gt;
+&lt;li&gt;Results oriented&lt;/li&gt;
+&lt;li&gt;Listens and shares info.&lt;/li&gt;
+&lt;li&gt;Career development&lt;/li&gt;
+&lt;li&gt;Strategy&lt;/li&gt;
+&lt;li&gt;Key Technical skills.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and
-return to its own, safe country.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.&lt;/p&gt;
-&lt;h4&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
-&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.&lt;/p&gt;
-&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
-&lt;h5&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
-&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.&lt;/p&gt;
-&lt;h6&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the…]]></description><link>https://kennylee.com/my-second-post/</link><guid isPermaLink="false">https://kennylee.com/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
-&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich.”?
-(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://kennylee.com/hello-world/</link><guid isPermaLink="false">https://kennylee.com/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3&gt;Effective Teams&lt;/h3&gt;
+&lt;p&gt;Mixed personalities
+How feelings about teams are often talked about.
+Group norms plays role in team participation. Safe or threathened. Draining or energizing.
+This will have direct impact from group culture.
+Group norms is the answer to Google (how of team, not who).
+What is the most effective group norm?&lt;/p&gt;
+&lt;p&gt;Group norm, psycologial safety - group is a safe place for taking risks.  Will not punish, embarass and mutual respect. Julia (Google) from Harvard researching hospitals.&lt;/p&gt;
+&lt;p&gt;Million $ question. Psycological safety without dissent and debate.  How do you convince people to feel safe, without losing the ability to disagree?&lt;/p&gt;
+&lt;p&gt;When we focus on trying to be productive, we become blind to details that should give us pause.  It feels good to have closure. Zarier, Israel war relate to Egyption attack.&lt;/p&gt;
+&lt;h3&gt;Different company models:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Star - Hire top talent and give autonomy.&lt;/li&gt;
+&lt;li&gt;Engineering - Focus on solving problems as a team&lt;/li&gt;
+&lt;li&gt;Beauracratic - HR, dictate, organizational&lt;/li&gt;
+&lt;li&gt;Autocratic - Focus on CEO, leadership&lt;/li&gt;
+&lt;li&gt;Commitment - Focus on life long commitment from employees, CEO - build a company where people leave when they retire or die.  Slow and steady growth.  Pronounced dead by Silicon Valley in mid-90s. Getting culture right is more important than building the right product.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Biggest value came from Star model, but also had the higest number of failures due to in-fighting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Consistent winner is the commitment culture&lt;/strong&gt;, and fastest companies to go public.  Choose employees slowly. Sense of trust between the employees.
+Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Invest in training.&lt;/li&gt;
+&lt;li&gt;Generous work from home.&lt;/li&gt;
+&lt;li&gt;Daycare.&lt;/li&gt;
+&lt;li&gt;Focus on making employees happy.&lt;/li&gt;
+&lt;li&gt;Customers stay loyal for years of relationships.&lt;/li&gt;
+&lt;li&gt;Good employees are the hardest to find.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Probablalistic thinking is valuable. Narrow question from many vantage points and adjust.  Question our assumptions and live with uncertainty.&lt;/p&gt;
+&lt;p&gt;Power law disbritutions, erlang curve. Bayes rule.  Forecast base on observations with limited data.&lt;/p&gt;
+&lt;p&gt;Innovation brokers - creative people take diaparate ideas and create something original.  Alternative ways of thinking.&lt;/p&gt;
+&lt;p&gt;Handwriting is more disfluent than typing - handwriter note takers have higher test score than typers.  Handwriters learn more.  When we encoutner new info, we should force ourselves to do something witg the data.  If you want to lose weight, plot the weight data on paper, or explain it to people.  Describe it, explain it, learn it.  It will be more effective.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Magazine Reading Hack]]></title><description><![CDATA[I almost gave up reading magazines. Few years ago, I received an email from an airline, that my milage points were going to expire…]]></description><link>https://kennylee.com/2012-12-16-reading-magazines/</link><guid isPermaLink="false">https://kennylee.com/2012-12-16-reading-magazines/</guid><pubDate>Sun, 16 Dec 2012 10:18:00 GMT</pubDate><content:encoded>&lt;h3&gt;I almost gave up reading magazines.&lt;/h3&gt;
+&lt;p&gt;Few years ago, I received an email from an airline, that my milage points were going to expire. Unfortunately, I didn’t quite have enough to redeem a ticket.&lt;/p&gt;
+&lt;p&gt;However, I could redeem them for magazine subscriptions. As a result, I was able to subscribe over 10 mags. Subscription included Forbes, Inc., Fast Company, Fortune, Macworld, etc.&lt;/p&gt;
+&lt;p&gt;After a few months, I collected a stash of over 40 magazines that I couldn’t catch up with…until this weekend. Here is my technique.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h3&gt;Cut/Rip Out Table of Contents Page(s)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Circle articles with a marker/highlighter (preferably bright color) that you want to read.&lt;/li&gt;
+&lt;li&gt;Limit to less than 5 articles per magazine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Do Not Skim Through the Magazine&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go directly to the articles chosen.&lt;/li&gt;
+&lt;li&gt;Ignore the fancy advertisements and filler articles.&lt;/li&gt;
+&lt;li&gt;Read the chosen article(s) and move to the next.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Throw the Magazine Away&lt;/h3&gt;
+&lt;p&gt;Take notes or scan article into Evernote or other note capturing tool&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Toss/recycle the magazine.&lt;/li&gt;
+&lt;li&gt;Using the steps above, I was able to go through 12 magazines under 2 hours feeling satisfied and no money (miles in this case) wasted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That’s 10 mins per magazine…definite improvement from long magazine reading sessions, or just chucking them into the recycling bin…unread.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Inbox Zero]]></title><description><![CDATA[Inbox Zero, GTD, whatever we name it…I have to be very proactive to keep my inbox clean. It’s part of my daily routines so that email doesn…]]></description><link>https://kennylee.com/2012-11-10-inbox-zero/</link><guid isPermaLink="false">https://kennylee.com/2012-11-10-inbox-zero/</guid><pubDate>Sat, 10 Nov 2012 10:18:00 GMT</pubDate><content:encoded>&lt;p&gt;Inbox Zero, GTD, whatever we name it…I have to be very proactive to keep my inbox clean. It’s part of my daily routines so that email doesn’t ruin my life.&lt;/p&gt;
+&lt;p&gt;When I have a backlog of emails, it affects my attention and my ability to focus.&lt;/p&gt;
+&lt;p&gt;After reading many books, blogs, article, here is my sweetspot.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Delete/Archive&lt;/strong&gt; – I want it out of my inbox ASAP! Deleting is priority. If you can’t delete, then Archive the email.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Do&lt;/strong&gt; – If it takes less than 2 mins to respond…DO…IT…NOW. No more than 5 sentences.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delegate&lt;/strong&gt; – Give as much as possible to someone else.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Defer&lt;/strong&gt; – If it takes more than 5 mins, put it into your defer folder. My “defer” folder is named “Action”.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Bottom line&lt;/h3&gt;
+&lt;p&gt;Go quickly through your email, so that you can focus on &lt;strong&gt;DEEP WORK&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;“Emailing” does not equal productivity.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HP EX485 - Install Ubuntu + Amahi]]></title><description><![CDATA[I purchased the HP EX485 early 2009, but it has become useless to me since I switched to a Mac.  With the release of OSX Lion, there is no…]]></description><link>https://kennylee.com/2012-08-26-HP-EX485/</link><guid isPermaLink="false">https://kennylee.com/2012-08-26-HP-EX485/</guid><pubDate>Sun, 26 Aug 2012 10:18:00 GMT</pubDate><content:encoded>&lt;p&gt;I purchased the HP EX485 early 2009, but it has become useless to me since I switched to a Mac.  With the release of OSX Lion, there is no solution that I’ve been able to find to use OSX Time Machine (backup) with EX485, even with the Windows Home Server (WHS) 2011 update.  I’ve spent countless hours researching online and testing before I gave up.&lt;/p&gt;
+&lt;p&gt;As a result, HP EX485 sat in my closet for the past year or so, collecting dust.  $500 worth of equipment (including 3x 1 TB hard drives) sitting lame in my closet.&lt;/p&gt;
+&lt;p&gt;A week ago, I decided to take a look at the hardware again and see what options are available to me with the EX485.&lt;/p&gt;
+&lt;h3&gt;Inspiration – Amahi&lt;/h3&gt;
+&lt;p&gt;I remember reading about Amahi somewhere (probably &lt;a href=&quot;http://lifehacker.com/5332535/amahi-turns-old-systems-into-full-featured-media-servers&quot;&gt;Lifehacker&lt;/a&gt;), decide to investigate it.  Here are some things that Amahi can do.&lt;/p&gt;
+&lt;p&gt;Share your photos (or any files) with any device in your network
+Centrally store all your music and videos
+Quickly back-up your computers
+Run applications to co-ordinate your household (eg. shared calendars)
+Securely access all your ‘stuff’ when you are out, whether at work, a friend’s place, or out of town!
+I also found this article which inspired me to pursue this option: &lt;a href=&quot;http://www.howtogeek.com/63253/upgrade-your-windows-home-server-with-amahi/&quot;&gt;http://www.howtogeek.com/63253/upgrade-your-windows-home-server-with-amahi/&lt;/a&gt;.  However, I had 2 problems with this artcle: 1) It appears the Amahi will stop supporting Fedora and Express CD installs in the future; 2) Instruction didn’t work for me.&lt;/p&gt;
+&lt;p&gt;Therefore, I sought out the goal to install Ubuntu 12.04 (latest version at the time when this article was written) and Amahi on the headless (no VGA/keyboard/mouse) HP EX485 server.&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;It took at least 4 hours to figure out the solution in the howtogeek article above wouldn’t work for me.  When I was at the point of almost giving up, I found this article by Dag Olav which gave me hope! &lt;a href=&quot;http://dagolav.prestegarden.com/installing-ubuntu-on-the-hp-mediasmart-ex490&quot;&gt;http://dagolav.prestegarden.com/installing-ubuntu-on-the-hp-mediasmart-ex490&lt;/a&gt;.  He doesn’t show instructions to install Amahi, but at least you can get Ubuntu on the EX485 (in his case…EX490, a close cousin).&lt;/p&gt;
+&lt;h3&gt;Install Ubuntu 12.04 Server 64-bit&lt;/h3&gt;
+&lt;p&gt;Read Dag’s article carefully and follow his instructions.  HOWEVER, you do need to make minor tweaks to get it working on the EX485 and Amahi.  Here is what I did…which turned out to be successful for me.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure that the computers/servers you are working on are connect to the internet using the network card/ethernet cable (not wireless).&lt;/li&gt;
+&lt;li&gt;I did not use a USB drive for install.  I downloaded Ubuntu from their website and burned on a CD.  It’s just because I didn’t have a USB stick with me and didn’t want to buy one.  CD worked fine for me.&lt;/li&gt;
+&lt;li&gt;Download Ubuntu 12.04 SERVER 64-bit for the EX485.&lt;/li&gt;
+&lt;li&gt;I could NOT for the life of me get the Ubuntu DESKTOP version working.  I think it might have to due with the lack of video in the EX485.  So, unless you think you know how to solve this….stick to the SERVER version.&lt;/li&gt;
+&lt;li&gt;IMPORTANT (applies to EX485) Do you see where Dag’s says to use ‘eth0′ in the ‘interfaces’ file?  Replace that with ‘eth1′.  I wasted hours because I didn’t read a comment by a reader that provided this solution.  This is so that when the transplanted hard drive boots up for the 1st time in the EX485, it’ll know which network card to talk to.  Note: We’ll change this back to ‘eth0′ later.&lt;/li&gt;
+&lt;li&gt;Before you proceed, you should now been able to install Ubuntu on the EX485, and SSH into it, and have a terminal prompt.  Congratulations.&lt;/li&gt;
+&lt;li&gt;This is final step before moving onto Amahi install.  We have to change EX485 network card’s ‘eth1′ binding to ‘eth0′.  Apparently, Amahi  likes to use ‘eth0′ since it’s supposed to be the primary network card.  Follow these instructions: &lt;a href=&quot;http://wiki.amahi.org/index.php/BindingNetworkDevices&quot;&gt;http://wiki.amahi.org/index.php/BindingNetworkDevices&lt;/a&gt; .  Basically, in the ’70-persistent-net.rules’ file, change the ‘eth1′ to ‘eth0′ and ‘eth0′ to ‘eth1′.  Lastly, go back to step #5 above an change the ‘interfaces’ file to use ‘eth0′, since the network card (NIC) is now assigned to ‘eth0′.&lt;/li&gt;
+&lt;li&gt;Reboot and confirm that it’s still working and you can ‘ssh’ into the server.  Whew…let’s move on!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Install Amahi&lt;/h3&gt;
+&lt;p&gt;From here, Amahi does a good job of explaining what to do. &lt;a href=&quot;http://docs.amahi.org/ubuntu-12.html&quot;&gt;http://docs.amahi.org/ubuntu-12.html&lt;/a&gt;.  Follow the outlined steps starting from step #2.  It thought I would have more to write here, but I really don’t.  Amahi’s instructions are pretty straight foward and easy.&lt;/p&gt;
+&lt;p&gt;That should do it!  Let’s starting enjoying EX485 again!  Thanks to Ubuntu and Amahi!
+Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Mission Accomplished]]></title><description><![CDATA[Fundraising Simply amazing.  At the beginning of the race week, I was only at 80% of my fundraising $4,000 goal.  By the end of the week, I…]]></description><link>https://kennylee.com/2012-04-12-lavaman-accomplished/</link><guid isPermaLink="false">https://kennylee.com/2012-04-12-lavaman-accomplished/</guid><pubDate>Thu, 12 Apr 2012 10:18:00 GMT</pubDate><content:encoded>&lt;h3&gt;Fundraising&lt;/h3&gt;
+&lt;p&gt;Simply amazing.  At the beginning of the race week, I was only at 80% of my fundraising $4,000 goal.  By the end of the week, I was up 110% of my goal.  Final fundraised amount = $4,390. WHOO-HOO!  For those who supported this cause through donations, THANK YOU!&lt;/p&gt;
+&lt;p&gt;Our Washington/Alaska team raised over $240K, and 45 ppl trained/participated in Lavaman!  Shoutout to my teammates, Liesel, Tarang, and Janet, who were 3 of top 10 fundraisers in the country!  AMAZING!&lt;/p&gt;
+&lt;p&gt;Team in Training (TNT) as a whole raised over $2.5M, and over 540 TNT fundraisers competed in Lavaman (1200+ ppl including non-TNT participants).  It was quite a sight to see a sea of purple all fundraising to cure blood cancers!&lt;/p&gt;
+&lt;h3&gt;Impact&lt;/h3&gt;
+&lt;p&gt;During/between meals, training sessions, and team meetings, I was able to hear incredible stories of teammates’ personal stories related to cancer.&lt;/p&gt;
+&lt;p&gt;Survivors, dad/mothers, daughters/sons, grandparents, relatives, friends of cancer survivors or lost ones, all had incredible stories to share that fueled my motivation.&lt;/p&gt;
+&lt;p&gt;Everyone knows that I don’t usually get emotional, but some of these incredible stories make me…well you know…&lt;/p&gt;
+&lt;p&gt;I want to recap why we’re fundraising.  I know some of you just donated b/c I twisted your arm (and I appreciate that), but here is where your hard earned dollars are going:&lt;/p&gt;
+&lt;p&gt;The Leukemia &amp;#x26; Lymphoma Society (LLS) is the world’s largest voluntary health agency dedicated to blood cancer.&lt;/p&gt;
+&lt;p&gt;The LLS mission: Cure leukemia, lymphoma, Hodgkin’s disease and myeloma, and improve the quality of life of patients and their families.&lt;/p&gt;
+&lt;p&gt;Nearly 50% of all cancer drugs approved by the FDA during the past decade were for blood cancers. And they are helping other patients as well.  Five of those drugs have been approved for patients with solid tumors and others are being tested for other indications.&lt;/p&gt;
+&lt;p&gt;There are 3 main areas the LLS supports (click links below if you want to learn more):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Research&lt;/li&gt;
+&lt;li&gt;Patient Services&lt;/li&gt;
+&lt;li&gt;Public Policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a question that you might want to ask, but are afraid to, or don’t want to be douchey.&lt;/p&gt;
+&lt;p&gt;Question: LLS/TNT raises so much money, are we close to a cure yet?  Can you stop asking me for donations?&lt;/p&gt;
+&lt;p&gt;Answer: How can you ask a cancer survivor that question?  If you are reading this blog, you’re screwed…you’re on my donation list until we find a cure.  Just kidding…well actually, not really.&lt;/p&gt;
+&lt;p&gt;But seriously, here are the facts as of 2012.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Every 4 minutes, one person in the United States is diagnosed with a blood cancer.&lt;/li&gt;
+&lt;li&gt;Every 10 minutes, someone in the US dies from a blood cancer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will keep asking for your support until there is a cure, and this mean a lot to me.  There is no obligation, but even a small donation makes a difference.&lt;/p&gt;
+&lt;h3&gt;My 1st Triathlon - Lavaman 2012&lt;/h3&gt;
+&lt;!-- ![Tri parking lot](./parkinglot.jpeg) --&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    href=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB3SirDsRlf//EABsQAAEEAwAAAAAAAAAAAAAAAAABAgMUERIh/9oACAEBAAEFArEZYYWIxOmxlD//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BgX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAYEAACAwAAAAAAAAAAAAAAAAAAEAFB4f/aAAgBAQAGPwK1hL//xAAdEAEAAgAHAAAAAAAAAAAAAAABADERIVFhcZGx/9oACAEBAAE/ISrxN16jrMN4JTIJiUpP/9oADAMBAAIAAwAAABC/z//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAEDAQE/EIQL/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAERIf/aAAgBAgEBPxC5a//EAB0QAAMAAgIDAAAAAAAAAAAAAAABEWFxITFRgaH/2gAIAQEAAT8Qoh7XC6dTty3t9hqitz+jakwnLgfOSeIf/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
+        alt=&quot;Image&quot;
+        title=&quot;Image&quot;
+        src=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg&quot;
+        srcset=&quot;/static/c237194c43f92ef837f7cc85fbaf1dff/ff44c/parkinglot.jpg 158w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/a6688/parkinglot.jpg 315w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/828fb/parkinglot.jpg 630w,
+/static/c237194c43f92ef837f7cc85fbaf1dff/acb04/parkinglot.jpg 750w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;You can also write code blocks here!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; saltyDuckEgg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chinese preserved food product&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Number&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Title&lt;/th&gt;
-&lt;th align=&quot;right&quot;&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Philosopher’s Stone&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2001&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Chamber of Secrets&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2002&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Prisoner of Azkaban&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
-========
-
-Header 2
---------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
-## Header 2 ##
-### Header 3 ###
-#### Header 4 ####
-##### Header 5 #####
-###### Header 6 ######&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
+&lt;h3&gt;I had 2 goals&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;li&gt;Finish the race&lt;/li&gt;
+&lt;li&gt;Don’t finish last in my age group&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Here’s some example code:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; ## This is a header.
-&amp;gt; 1. This is the first list item.
-&amp;gt; 2. This is the second list item.
-&amp;gt;
-&amp;gt; Here&amp;#39;s some example code:
-&amp;gt;
-&amp;gt;     Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I accomplished both of these lofty goals.  You wouldn’t have believed that I could reach these goals if you watched my first swim practice.&lt;/p&gt;
+&lt;h3&gt;Swim: 1.5K/0.9 miles - Time = 38:34&lt;/h3&gt;
+&lt;p&gt;Swim felt good.  Surprisingly good.&lt;/p&gt;
+&lt;p&gt;When your “wave” (usually grouped by age) begins the race, people are slamming into each other, kicking and elbowing.&lt;/p&gt;
+&lt;p&gt;But once you’re out there, it just becomes you, the ocean, marine life (fish, sea turtles), and the occasional “Was that a shark fin?” or “Why did the water get warm all of a sudden?….oh no, close your mouth!”&lt;/p&gt;
+&lt;h3&gt;Bike: 40K/25 miles - Time = 1:31:17&lt;/h3&gt;
+&lt;p&gt;Going downhill - Eazy-breezy.  I have a heavy frame, so I’m like a Mack truck speeding past light-weight skinny folks.  See you later skinny…WHA-HAHAHAH!!!&lt;/p&gt;
+&lt;p&gt;Going uphill - Gah…I struggle here.  Skinny or not, everyone passes me going uphill.  I have weak legs.  My cousin once told me that I’m like Mr. Potato Head…fat head, skinny limbs - I was 10 yrs old for god sake.  Emotional scars…&lt;/p&gt;
+&lt;p&gt;I don’t have “Mr. Potato Head riding on bike” picture.  But, here is what it feels to be part of the pre-race bike crowd when we’re all setting up and preparing for the race.&lt;/p&gt;
+&lt;h3&gt;Run: 10K/6.2 miles - Time = 1:09:51&lt;/h3&gt;
+&lt;p&gt;I ran a marathon a couple of years ago…and I managed to run the entire 26.2 miles.  So this should be cake, right?  Wrong…I ended up running much slower than my usual pace.&lt;/p&gt;
+&lt;p&gt;Stumbling through a lavafield, unshaded road with sun beating down your back, then finishing on a sandy/rocky beach path during the last 1.5 mile was not easy.  I shoved ice under my hat and shirt at each opportunity.  It’s highly recommended.&lt;/p&gt;
+&lt;p&gt;By the time I reached the finish line, I looked like a sunburnt Oompa Loompa.  BUT, I also felt great afterwards!&lt;/p&gt;
+&lt;h3&gt;Total Race Time = 3:24:48 (h:mm:ss)&lt;/h3&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I learned how to swim/bike/run together for the 1st time.  I made new friends, and I tried something I’ve never done before…and it feels AWESOME! It was definitely a challenge, but it was totally worth it, and makes me feel more alive!&lt;/p&gt;
+&lt;p&gt;Special thanks to Amy for supporting me and massaging me throughout the training season; my parents who sent special prayers so that I don’t drown; thanks to my mentors Anika and Dorothy; captains Ande and Louisa; coaches Cathy and Fred; friends whom I freeloaded rides from after practices (esp., Ben, Erika, Sandy); all of the new TNT friends who gave me guidance and support; and finally, thanks to those who donated to this great cause, and supporters who read this blog!&lt;/p&gt;
+&lt;p&gt;Now it’s your turn to try something new, and share your experiences with me!  I would love to live vicariously through you!&lt;/p&gt;
+&lt;p&gt;Lastly and most importantly, all of this is for a great cause!  We’re training/fundraising to save lives and cure cancer!&lt;/p&gt;
+&lt;p&gt;Thank you for sharing my 1st triathlon journey with me.  It has been a wild, fun ride.  Until next time…&lt;/p&gt;
+&lt;p&gt;Keep on tri-ing,
+Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Less Than a Week To Go!]]></title><description><![CDATA[Less than a week until the triathlon in Hawaii… Fundraising I’m 80% there.  $3,215 of $4,000 goal.  I have few more bucks trickling in, but…]]></description><link>https://kennylee.com/2012-03-27-lavaman-week-to-go/</link><guid isPermaLink="false">https://kennylee.com/2012-03-27-lavaman-week-to-go/</guid><pubDate>Tue, 27 Mar 2012 10:18:00 GMT</pubDate><content:encoded>&lt;p&gt;Less than a week until the triathlon in Hawaii…&lt;/p&gt;
+&lt;h3&gt;Fundraising&lt;/h3&gt;
+&lt;p&gt;I’m 80% there.  $3,215 of $4,000 goal.  I have few more bucks trickling in, but I don’t think I will raise 100% of my goal.&lt;/p&gt;
+&lt;p&gt;I’ll just be blunt…if you haven’t donated, please donate. It’s for a good cause.  It really is.  It’s being used for lifesaving research to cure blood cancers!!!&lt;/p&gt;
+&lt;h3&gt;Team Bank of America&lt;/h3&gt;
+&lt;p&gt;I have to give my employer, Bank of America, and my co-workers a big shout-out.  About 1/3 of my fundraising comes from Bank of America because of gift matching.  Not every participant is lucky enough to have employer gift matching, so I am very fortunate.
+Did you know that Bank of America has our own TNT team?&lt;/p&gt;
+&lt;p&gt;The BofA TNT spring team is now about 30 strong.  We literally have people from coast to coast—from the Washington/Alaska chapter to the Northern &amp;#x26; Central Florida chapter.  So far, the team has raised approximately $26,000 to fight blood cancer.  That is AWESOME!&lt;/p&gt;
+&lt;p&gt;Also, over the past three years, there have been over 250 Bank of America employees who have completed a Team in Training event while raising over $650,000.  Take that, blood cancers!&lt;/p&gt;
+&lt;h3&gt;Training&lt;/h3&gt;
+&lt;p&gt;Bad news.  With less than a week to go, I’m sick.  I’m sneezing, coughing, can’t sleep, can’t concentrate.&lt;/p&gt;
+&lt;p&gt;My body usually bounces back from colds pretty quickly, but I think I’m still living in the past, when I was few years younger.&lt;/p&gt;
+&lt;p&gt;I’m pretty sure that inception of the cold is from a 27mi bike ride 2 Saturdays ago, when it started snowing when I was about half way done with the bike ride.&lt;/p&gt;
+&lt;p&gt;It’s a very beautiful moment when nice snow flurries starts falling.  However, as soon as you start gaining some speed on the bike, those same snow flurries start feeling like angry little torpedos aimed straight for your face and eyeballs.  It didn’t help that I had fleece jacket and gloves which absorbed water like Shamwow.&lt;/p&gt;
+&lt;p&gt;As soon as I got back home, I jumped into the bathtub and dipped myself into near scalding hot water.  It felt SOOO good, but I think the damage has been done.&lt;/p&gt;
+&lt;p&gt;Just this past Saturday, the Lavaman team got together for a final bike/run training.  We also dropped off our bikes to ship to Hawaii, and receive instructions for the triathlon weekend.  We also received our way-too-tight triathlon tanks.  This is the only time I’ll be wearing a baby tee.&lt;/p&gt;
+&lt;p&gt;No, that asian guy in the middle is not me.  Derek would be very disappointed if we were mistaken for each other.  He is training for the Ironman.  Yes, the real, full Ironman.&lt;/p&gt;
+&lt;h3&gt;Final Thoughts: Pre-My-1st-Triathlon&lt;/h3&gt;
+&lt;p&gt;I’ve come a long way since I signed up for this triathlon in Aug ‘2011.  I’ve learned how to swim correctly (at least in my mind), bought my 1st road bike and learned about cycling, and experienced joys of training outdoors during the winter season.&lt;/p&gt;
+&lt;p&gt;But, I’m still scared s***less.  That’s right, I can admit it and I’m okay with it.&lt;/p&gt;
+&lt;p&gt;I’m happy that I’m doing something new, challenging, exciting…something that takes me out of my comfort zone.&lt;/p&gt;
+&lt;p&gt;What about you?  Tell me about it next time we chat.&lt;/p&gt;
+&lt;p&gt;Keep on tri-ing!
+Kenny&lt;/p&gt;
+&lt;p&gt;P.S. I’ll do a last blog update post-triathlon / vacation.  No later than April 15th.  TTYL.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Domo Arigato]]></title><description><![CDATA[Countdown: 11 weeks to race day 11 weeks until the day I swim, bike, and run at Lavaman to help cure cancer! HAPPY NEW YEAR!  I hope this…]]></description><link>https://kennylee.com/2012-01-14-lavaman-domo-arigato/</link><guid isPermaLink="false">https://kennylee.com/2012-01-14-lavaman-domo-arigato/</guid><pubDate>Sat, 14 Jan 2012 10:18:00 GMT</pubDate><content:encoded>&lt;h3&gt;Countdown: 11 weeks to race day&lt;/h3&gt;
+&lt;p&gt;11 weeks until the day I swim, bike, and run at Lavaman to help cure cancer!&lt;/p&gt;
+&lt;p&gt;HAPPY NEW YEAR!  I hope this year brings joy and happiness to you and your family.&lt;/p&gt;
+&lt;p&gt;Domo Arigato (thank you in Japanese), Mr. Roboto.  FYI - this is my favorite robot.&lt;/p&gt;
+&lt;p&gt;Amy and I spent the New Year season in Japan.  We spent time with Amy’s sister (Yuri) whom we haven’t seen in a LOOONNG time.  It was the best New Years we’ve ever had, period.&lt;/p&gt;
+&lt;p&gt;We were in Tokyo for about a week, and I managed to get in one run.  The straight line (pic below) is the route I was supposed to take, but I ended up zip zagging back and forth.  Luckily, public transportation is awesome in Tokyo.&lt;/p&gt;
+&lt;p&gt;I often get asked from friends when/where I run, how I find my running routes, weather the cold, etc.&lt;/p&gt;
+&lt;p&gt;It’s rather simple.  I just put on weather appropriate clothes, and just go (yes, even in the rain).&lt;/p&gt;
+&lt;p&gt;Do you remember Warcraft (release 1994)?  This is the first and last Warcraft I played, so I have no frame of reference for the newer versions.&lt;/p&gt;
+&lt;p&gt;You first start out at your basecamp, and everything around you is pitch dark.  The only way you can figure out what’s around you is to go and explore for yourself.  And once you’re there, it remains ‘illuminated’ so you can slay your enemies.  That’s much like what happens when I go for a run in a unfamiliar place.  Fear of the unknown is my enemy, and I slay it by facing it head on.   My geek friends will appreciate the Warcraft reference.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 320px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZElEQVQoz1WRWW/aQBSFxwZ7ZozxwmISPMZAzGJjg3dMStZmI4WQhFRVlKgPrdSqb1V/QF/7tzsOrdqch9HM6H736J4LhkZtaNbstnYZd09GjTeemXrdqN+MLS21DddS5hPt/KizvO5fHhqnQedg2Fi69UO78e1yCLYqFNidmkIvDHgtBqA+hwOuMZbdgWD3YLH0p+TCbwJBEAYW4YsFXVPz4n/K74AFio2agZBYzXCiKalQCTGHWVq52W+Dks9VbYHWbZ1fu+baJShzpb0xb3pEC8uyD1mYw1eBDp4v+g+ZfRY5ad/YOv/PF4tMdYiUBMkR0l2lFgmSi1g+hw/tOvi8Sn49Zd+/+HO/T79YShcYUGRAgeE4dtwVKzGSfdRKKkYoqTEWewgUAETiah6AD5vDr6vw58fw2CM5LLA1FzuWKPfQaE+0vZIcw/pMOpmSMDDLIwET6pyHEXcb4PHp6PFq9mOdzj2TtqR5VFI0HosHI/nAlqUQUZhMpfairryBkoV4DTJcPtqxo4Gh18lidzEaDQZ6ySlq+1hNUDmEOyGe2pISIpXyASx7CLcRbiKmyG7D9HQF7Kfhedi5S8zYqWGPV1+yoQD1HDulvlOiz0qExA5GuyjP4q8mRAUnvvl+Zn6am1OnKri8GmD1BVZiZGRi5kh5IxdhHdFpmS38cmRWDazj1n3avo3anlXBI04JIN2k5EMtQbOhHHuSNIHYhFwdcruwUOG4Og+rPN3FrFcHd+v754fN6dniLBsvosYyNdYzYzNvvUvJbUhuE/LW37mZkutYv470ZUrWs9ZNQlYRuU+M386QVFmYHWQDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;warcraft&quot;
+        title=&quot;warcraft&quot;
+        src=&quot;/static/bc7e321984355934486788cd1c7148ab/72799/1.png&quot;
+        srcset=&quot;/static/bc7e321984355934486788cd1c7148ab/c26ae/1.png 158w,
+/static/bc7e321984355934486788cd1c7148ab/6bdcf/1.png 315w,
+/static/bc7e321984355934486788cd1c7148ab/72799/1.png 320w&quot;
+        sizes=&quot;(max-width: 320px) 100vw, 320px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;After the Tokyo trip, I have not been diligent in training, because my work has been kicking my butt lately.  However, I got a great run couple of days ago.  I got up at 6am, and off I went.  I snapped some photos with my iPhone of the neighborhoods that I wanted to explore.&lt;/p&gt;
+&lt;p&gt;Started near Pike’s Market @ 6am.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAByV3qNLSExf/EABoQAAIDAQEAAAAAAAAAAAAAAAEDAAISESH/2gAIAQEAAQUCus0giaqxcrMyvngn/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BSf/EABcRAQADAAAAAAAAAAAAAAAAAAABAhH/2gAIAQIBAT8BizH/xAAaEAACAgMAAAAAAAAAAAAAAAAAEQEiECFB/9oACAEBAAY/At4s2KGdKn//xAAaEAEAAwADAAAAAAAAAAAAAAABABEhYXGx/9oACAEBAAE/IWgNWXDsSbdU9Aw2LKpSzmf/2gAMAwEAAgADAAAAEHz/AP/EABcRAAMBAAAAAAAAAAAAAAAAAAABIRH/2gAIAQMBAT8QwcIf/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPxDQ7KW//8QAGRABAQEBAQEAAAAAAAAAAAAAAREAITFR/9oACAEBAAE/EEZoAPx8wRckMts8MIWR5VMRF/JOuTIfd93f/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Pike&amp;#39;s Place&quot;
+        title=&quot;Pike&amp;#39;s Place&quot;
+        src=&quot;/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg&quot;
+        srcset=&quot;/static/00b498122971b0500a67f7dd4e86b182/ff44c/2.jpg 158w,
+/static/00b498122971b0500a67f7dd4e86b182/a6688/2.jpg 315w,
+/static/00b498122971b0500a67f7dd4e86b182/828fb/2.jpg 630w,
+/static/00b498122971b0500a67f7dd4e86b182/c08c5/2.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Puget Sound @ Volunteer Park&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABgCAr/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQABBQJf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQABPyFf/9oADAMBAAIAAwAAABB8H//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAAICAgMAAAAAAAAAAAAAAAERABAhMUFRcf/aAAgBAQABPxCMIhZ7orguBPePK//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Volunteer Park&quot;
+        title=&quot;Volunteer Park&quot;
+        src=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg&quot;
+        srcset=&quot;/static/cf4a1377c5d09a9e82635110ef50e4be/ff44c/3.jpg 158w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/a6688/3.jpg 315w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/828fb/3.jpg 630w,
+/static/cf4a1377c5d09a9e82635110ef50e4be/c08c5/3.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Shot of the Space Needle from Volunteer Park&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABwHJxWBX/xAAYEAADAQEAAAAAAAAAAAAAAAAAAQIQEf/aAAgBAQABBQLaaJrjP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABkQAAIDAQAAAAAAAAAAAAAAAAEQABEhMf/aAAgBAQAGPwJ4Jywv/8QAHBABAAIBBQAAAAAAAAAAAAAAAQARMRAhUXGB/9oACAEBAAE/IYFi3jRDi9hbx4GdT//aAAwDAQACAAMAAAAQDM//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCn/8QAGxAAAgIDAQAAAAAAAAAAAAAAAREAITFRgRD/2gAIAQEAAT8QgUwI1u/AQJq7G+y2eybPY7ohqf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Space Needle&quot;
+        title=&quot;Space Needle&quot;
+        src=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg&quot;
+        srcset=&quot;/static/5223ca527ac8334e80ba2f741c1886cc/ff44c/4.jpg 158w,
+/static/5223ca527ac8334e80ba2f741c1886cc/a6688/4.jpg 315w,
+/static/5223ca527ac8334e80ba2f741c1886cc/828fb/4.jpg 630w,
+/static/5223ca527ac8334e80ba2f741c1886cc/c08c5/4.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ran up Queen Anne hill to Kerry Park (famous spot for photographs).  I didn’t realize I was near this park until I was running past it.  Check out the sunrise…AMAZING!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHEKrLMcP/EABkQAAIDAQAAAAAAAAAAAAAAAAABAgMQEv/aAAgBAQABBQLY3OKdrZ2f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BV//EABoQAAICAwAAAAAAAAAAAAAAAAABAjEQMpH/2gAIAQEABj8CzUeFI1R//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAERcUGB/9oACAEBAAE/IYQhLJ+hzZ4hT08P/9oADAMBAAIAAwAAABDb/wD/xAAXEQADAQAAAAAAAAAAAAAAAAAAARFR/9oACAEDAQE/EIiLT//EABcRAAMBAAAAAAAAAAAAAAAAAAABEVH/2gAIAQIBAT8QrKw//8QAGRABAQEBAQEAAAAAAAAAAAAAAREAURBh/9oACAEBAAE/EB88Kywqtprrl88dBFXXP//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Kerry Park&quot;
+        title=&quot;Kerry Park&quot;
+        src=&quot;/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg&quot;
+        srcset=&quot;/static/01b83576fb90bff7d3c8876030ecee59/ff44c/5.jpg 158w,
+/static/01b83576fb90bff7d3c8876030ecee59/a6688/5.jpg 315w,
+/static/01b83576fb90bff7d3c8876030ecee59/828fb/5.jpg 630w,
+/static/01b83576fb90bff7d3c8876030ecee59/c08c5/5.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ran back down to the Space Needle.  Selfie!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 383px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEBQP/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABajjCh2iCR0ypEBtsyC5//8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAAxASBCEj/9oACAEBAAEFApp1i3ksCjbrL11vpHmWY4Fjif/EABgRAAMBAQAAAAAAAAAAAAAAAAABAhEh/9oACAEDAQE/AZRhPBrWf//EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhEP/aAAgBAgEBPwFycrjbA1Cf/8QAHhAAAQQBBQAAAAAAAAAAAAAAEAABAiExERJBYXH/2gAIAQEABj8CWbO2PGe1qPRbuKk6/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIRBBMVGB/9oACAEBAAE/ITxK36C64JhUPRFaSr6g0wGBzUoGu7FVV9l7BKAT/9oADAMBAAIAAwAAABDH2kz/xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAEDAQE/ECR0nFxnRv/EABcRAQEBAQAAAAAAAAAAAAAAAAERACH/2gAIAQIBAT8QI0mG9yu4wN//xAAeEAEAAgEFAQEAAAAAAAAAAAABABEhMUFRYXGBwf/aAAgBAQABPxDMMEcFZW28iQaRleVWsoeeKxAbNB4O5CJTHbQd3LJxakW3Uv25ZWzafn5HIi5tRWVt8zpxAz//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Space Needle Selfie&quot;
+        title=&quot;Space Needle Selfie&quot;
+        src=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg&quot;
+        srcset=&quot;/static/afa9b7dcb518085d96a52d313d26ac55/ff44c/6.jpg 158w,
+/static/afa9b7dcb518085d96a52d313d26ac55/a6688/6.jpg 315w,
+/static/afa9b7dcb518085d96a52d313d26ac55/411a4/6.jpg 383w&quot;
+        sizes=&quot;(max-width: 383px) 100vw, 383px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For Grey’s Anatomy fans out there…here is the ‘hospital’.  Sssshhh, they don’t really work here…they’re in a studio in L.A.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAcCPGVigb//EABkQAAMBAQEAAAAAAAAAAAAAAAABAiEDEv/aAAgBAQABBQKsp4YT1pO+nodn/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAgEBPwGrr//EABsQAAICAwEAAAAAAAAAAAAAAAABITIQUZGh/9oACAEBAAY/AqpjldL+Ek7x/8QAGhAAAwEBAQEAAAAAAAAAAAAAAREhADFBcf/aAAgBAQABPyE5GT1zDJ3zI1cAR7O5QsyQPMJx7//aAAwDAQACAAMAAAAQZC//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qph//xAAXEQEBAQEAAAAAAAAAAAAAAAABACFh/9oACAECAQE/EBmXa//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExUWGBcZHR/9oACAEBAAE/EBUIxwK9OVBABbjxWJvnjxglJOjpgRYRANADf1kUlYAAb18fmMMQE3F16z//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Grey&amp;#39;s Anatomy&quot;
+        title=&quot;Grey&amp;#39;s Anatomy&quot;
+        src=&quot;/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg&quot;
+        srcset=&quot;/static/e1819848adac64a18d8983aa90c00127/ff44c/7.jpg 158w,
+/static/e1819848adac64a18d8983aa90c00127/a6688/7.jpg 315w,
+/static/e1819848adac64a18d8983aa90c00127/828fb/7.jpg 630w,
+/static/e1819848adac64a18d8983aa90c00127/c08c5/7.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Grabbed healthy ‘Iced Grande Non-Fat No-whip Mocha’ for Amy, and some grub for later.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABcBAAMBAAAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAeYhxs71Bh//xAAZEAEBAQEBAQAAAAAAAAAAAAACAQMAEhP/2gAIAQEAAQUCODXHO5WMXogS9PQ+hnf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEiH/2gAIAQMBAT8Blj//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIh/9oACAECAQE/AbS1/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAERIQIQEoH/2gAIAQEABj8CpD7RPKfheJDVa//EABwQAQADAAIDAAAAAAAAAAAAAAEAETEhQVGRof/aAAgBAQABPyGr+7EQaa6GW6SusGuR8xF2dmAv1P/aAAwDAQACAAMAAAAQA8//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qhj//xAAWEQEBAQAAAAAAAAAAAAAAAAAAASH/2gAIAQIBAT8Q2V//xAAdEAACAgIDAQAAAAAAAAAAAAABEQAhMUFhocHR/9oACAEBAAE/EKwkiykR+sIuzr2EriCPCWoNCjZIWSdZikYMxsLGIkKwCr6n/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Breakfast&quot;
+        title=&quot;Breakfast&quot;
+        src=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg&quot;
+        srcset=&quot;/static/4e12b7540c04fb223a226ea0638e08ae/ff44c/8.jpg 158w,
+/static/4e12b7540c04fb223a226ea0638e08ae/a6688/8.jpg 315w,
+/static/4e12b7540c04fb223a226ea0638e08ae/828fb/8.jpg 630w,
+/static/4e12b7540c04fb223a226ea0638e08ae/c08c5/8.jpg 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And finally, made it back home by 7:30am feeling energized.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 384px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.54430379746836%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIDBAUG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/9oADAMBAAIQAxAAAAG7AuVi+hEDc2qM5plcN//EAB0QAAEEAgMAAAAAAAAAAAAAAAEAAgMREyESIjH/2gAIAQEAAQUCaVnGY+74xbmtZixM6y2gNNUZtn//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAgEBPwEI/8QAHhAAAQQBBQAAAAAAAAAAAAAAAQACESEQEiAiMVH/2gAIAQEABj8CCcNXEYo2hfRnEAByn2dlr//EABwQAQADAQADAQAAAAAAAAAAAAEAIUEREDFRYf/aAAgBAQABPyEuL8nZhQoDYuwV0fUb3UTwOVntyEoPIFYV9Zp2MCrn/9oADAMBAAIAAwAAABBHML3/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBYz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAERD/2gAIAQIBAT8QB14ASZf/xAAdEAACAwEAAwEAAAAAAAAAAAABEQAhMVFxkbHB/9oACAEBAAE/EMgafIg4IOFhq6dgiHscvqxXqCyhBV7+wtcOku1c3BDxwgANLC/scJHI4XAkvYA8gXH5GIc//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Another selfie&quot;
+        title=&quot;Another selfie&quot;
+        src=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg&quot;
+        srcset=&quot;/static/7e717ac61afcfd3635a2b6adc016fa45/ff44c/9.jpg 158w,
+/static/7e717ac61afcfd3635a2b6adc016fa45/a6688/9.jpg 315w,
+/static/7e717ac61afcfd3635a2b6adc016fa45/4ecad/9.jpg 384w&quot;
+        sizes=&quot;(max-width: 384px) 100vw, 384px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Easy breezy.  If I can do it, so can you!  I hope you enjoyed views from my morning run in Seattle!&lt;/p&gt;
+&lt;p&gt;Thanks for your support, and if you haven’t already…&lt;strong&gt;JOIN ME TO FIGHT CANCER!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Keep on tri-ing!
+Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Lavaman - Meet My New Gear]]></title><description><![CDATA[Countdown: 15 weeks to race day. 15 weeks until the day I swim, bike, and run at Lavaman.  For the past few weeks, I have been getting…]]></description><link>https://kennylee.com/2011-12-20-lavaman-new-gear/</link><guid isPermaLink="false">https://kennylee.com/2011-12-20-lavaman-new-gear/</guid><pubDate>Tue, 20 Dec 2011 10:18:00 GMT</pubDate><content:encoded>&lt;h3&gt;Countdown: 15 weeks to race day.&lt;/h3&gt;
+&lt;p&gt;15 weeks until the day I swim, bike, and run at Lavaman.  For the past few weeks, I have been getting familiar with the gear that I had to purchase.&lt;/p&gt;
+&lt;p&gt;It seems silly, but trying to figure out which goggles, headlamp, and shorts to buy, all took much more time than anticipated.  I wish someone just handed me a list of things to buy, but I must’ve missed that email, so I had to research each item.&lt;/p&gt;
+&lt;p&gt;For example, I had no idea that tight swimming shorts are called jammers (right-side in picture).  Nor, did I know that there are tri-shorts (left-side) designed for swimming, biking, running, with padding in the butt area.&lt;/p&gt;
+&lt;p&gt;Also, because I train during dark, cold nights, I had to buy bike leg warmers, gloves, hat, and a headlamp.  If you have any recommendations for me, or would like links to products below, let me know.&lt;/p&gt;
+&lt;h3&gt;Run / Bike / Run Training&lt;/h3&gt;
+&lt;p&gt;This past Saturday, there was a run/bike/run training about 4 miles away from where I live.  Since I don’t have a car, I had to ride my new bike there (this was only my 2nd time on the bike).  Less than a mile later, I noticed that my tire was running a little low on air.&lt;/p&gt;
+&lt;p&gt;But, I was prepared.  Someone advised me that I should buy and take along a bike pump during my rides.  All good, right?&lt;/p&gt;
+&lt;p&gt;Newbie error…I didn’t realize that the valve of the pump and the tire didn’t match.  So instead of filling the tire with air, I let all of the air out.&lt;/p&gt;
+&lt;p&gt;If I was few years younger, I probably would’ve cried.&lt;/p&gt;
+&lt;p&gt;I almost started to walk back home with the bike, but I took a deep breath and started running to the training location 3 miles away…with the bike by my side.&lt;/p&gt;
+&lt;p&gt;It was a great decision.  As soon as I arrived, coach and mentor quickly filled my tire with air, and even reconfigured my pump so that the value matched (all I had to do was flip around the pump’s value….doh!).&lt;/p&gt;
+&lt;p&gt;I had an awesome workout, burned some calories, then consumed back those calories afterwards during breakfast with great company of fellow TNT participants, mentors, and coaches.  GO TEAM!&lt;/p&gt;
+&lt;p&gt;Keep on running!
+Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reason Why I'm Fundraising & Training]]></title><description><![CDATA[Almost 7 years ago, I was diagnosed with cancer…Non-Hodgkin’s Lymphoma. It was a difficult experience for Amy (wife) and I because we went…]]></description><link>https://kennylee.com/2011-12-13-lavaman-reason-fundraising/</link><guid isPermaLink="false">https://kennylee.com/2011-12-13-lavaman-reason-fundraising/</guid><pubDate>Tue, 13 Dec 2011 10:18:00 GMT</pubDate><content:encoded>&lt;p&gt;Almost 7 years ago, I was diagnosed with cancer…Non-Hodgkin’s Lymphoma.&lt;/p&gt;
+&lt;p&gt;It was a difficult experience for Amy (wife) and I because we went through it without the support of my immediate family. It wasn’t because they didn’t want to be supportive, it’s because I did not tell them. When I was diagnosed, my dad was going through radiation and chemo treatments for his gastric (stomach) cancer. Eventually, I ended up telling my dad, mom, and sister 4 years later. They all freaked out and we had our unforgettable emotional family moment. Sorry guys, I love y’all.&lt;/p&gt;
+&lt;p&gt;I want to thank Amy for being the best life partner. You found out that I had cancer less than a month after our wedding, and all those times you drove me to the doctors, radiation treatments, and putting up with my emotional swings will never be forgotten. I love you.&lt;/p&gt;
+&lt;p&gt;I am sharing this story because fight for cancer is a battle we have not yet won. It affects millions of people around the world.&lt;/p&gt;
+&lt;p&gt;Here are some stats around blood-based cancers (Leukemia, Lymphoma, and Myeloma) in America:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
+&lt;li&gt;Every 4 minutes, an American is diagnosed with blood cancer&lt;/li&gt;
+&lt;li&gt;Every 10 minutes, this disease takes the life of an individual&lt;/li&gt;
+&lt;li&gt;Leukemia is the most common type of blood cancer in children&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;- &lt;span class=&quot;token code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After 5 years of being cancer-free, I promised myself to participate in LLS and Team in Training event to celebrate my 5-year survival mark, and also contribute to the cause for a cure.&lt;/p&gt;
+&lt;p&gt;In 2010, I fundraised with Team in Training, and managed to run a full marathon. Cancer didn’t kill me, but I felt like marathon training almost did. :) See the full story &lt;a href=&quot;http://pages.teamintraining.org/wa/Amica10/kleewn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This season, I’ll be serving both as a triathlon participant, and an ‘honored teammate (cancer survivor)’ to thank the fundraising team. I learned how to run last year, but I can barely ride a bike, and swimming will be my biggest challenge. I’ll be sharing my new experiences as I progress through the training.&lt;/p&gt;
+&lt;p&gt;I will be fundraising/training for 2 people.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Buy flour and salt&lt;/li&gt;
-&lt;li&gt;Mix together with water&lt;/li&gt;
-&lt;li&gt;Bake&lt;/li&gt;
+&lt;li&gt;My dad, who survived both gastric and colon cancer in the past 8 years, during 2 different times. Although he did not have ‘blood-cancer’, much of the research can be used for both blood and non-blood based cancers. Love you dad. I’m so glad we both beat it.&lt;/li&gt;
+&lt;li&gt;An awesome career mentor of mine, David Parker’s mom recently passed due to Leukemia. This is for the Parker family.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Buy flour and salt
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Mix together with water
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Bake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;1. &lt;span class=&quot;token code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Paragraph:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- --&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Paragraph:
-
-    Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* * *
-
-***
-
-*****
-
-- - -
-
----------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &amp;quot;Example&amp;quot;) link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example] [id] reference-style link.
-
-[id]: http://example.com &amp;quot;Optional Title&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This paragraph has some &lt;code class=&quot;language-text&quot;&gt;code&lt;/code&gt; in it.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This paragraph has some `code` in it.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://placehold.it/200x50&quot; alt=&quot;Alt Text&quot; title=&quot;Image Title&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;![Alt Text](https://placehold.it/200x50 &amp;quot;Image Title&amp;quot;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Keep on running,
+Kenny&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My 1st Marathon - Team in Training]]></title><description><![CDATA[The original blog about my experience as cancer survior and training for my very first marathon is here.]]></description><link>https://kennylee.com/2010-11-29-first-marathon/</link><guid isPermaLink="false">https://kennylee.com/2010-11-29-first-marathon/</guid><pubDate>Mon, 29 Nov 2010 10:18:00 GMT</pubDate><content:encoded>&lt;p&gt;The original blog about my experience as cancer survior and training for my very first marathon is &lt;a href=&quot;http://pages.teamintraining.org/wa/Amica10/kleewn&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content:encoded></item></channel></rss>
