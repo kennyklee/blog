@@ -1,0 +1,6 @@
+ports:
+  - port: 8000
+tasks:
+  - init: npm run install
+    command: npm run develop
+    openIn: bottom
