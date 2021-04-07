@@ -7,6 +7,10 @@ https://marcopeg.com/2019/free-website-with-gatsby-and-gitpod
 
 `rm -rf ./docs && mv ./public ./docs` # rename to docs folder for Github publish
 
+`npm run publish` run the publish commands.
+
+`npm run deploy` Publishes and deploys to production.
+
 Can't yet change the name of the [docs folder](https://github.community/t/can-i-define-a-custom-source-or-folder-from-which-my-site-hosted-on-github-pages-can-load-from/10237/13).
 
 Custom domain is managed through Cloudflare per [Github instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain).
