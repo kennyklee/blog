@@ -61,6 +61,9 @@ const GlobalStyles = createGlobalStyle`
     --color-heading: #1a202c;
     --color-heading-black: black;
     --color-accent: #d1dce5;
+    /* Colors */
+    --blue: #005b99;
+    --white: #fff;
   }
 
   /* HTML elements */
@@ -318,6 +321,28 @@ const GlobalStyles = createGlobalStyle`
 
   .gatsby-highlight {
     margin-bottom: var(--spacing-8);
+  }
+
+  /* Scrollbar Styles */
+
+  html {
+    margin-left: calc(100vw - 100%); // prevents from jumping
+  } 
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) var(--white);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--blue) ;
+    border-radius: 8px;
+    border: 3px solid var(--white);
   }
 
   /* Media queries */
