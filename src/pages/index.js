@@ -1,69 +1,27 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from "../components/Bio"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import Nav from "../components/Nav"
 
-const BlogIndex = ({ data, location }) => {
+const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
-    </Layout>
+  <Layout location={location} title={siteTitle}>
+    <SEO title="All posts" />
+    <Bio />
+    <b>April 2021</b>
+    <p>I am currently learning how to create this site using <a href="https://gatsbyjs.com" target="_blank">Gatsby</a> and <a href="https://reactjs.org" target="_blank">React</a>.</p>
+    <p>I'm using <a href="https://gitpod.io" target="_blank">Gitpod.io</a> as a cloud IDE, and <a href="https://github.com/kennyklee/blog/projects/1" target="_blank">Github</a> to serve static pages. Not having a local development environment on a computer and using <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> to code in the cloud is amazing.</p>
+  </Layout>
   )
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
   query {
