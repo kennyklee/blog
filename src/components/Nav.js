@@ -15,13 +15,31 @@ const NavStyles = styled.nav`
     grid-gap: 2rem;
     align-items: center;
   }
-
   a {
+    text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
   }
-  a:hover {
-    text-decoration: underline;
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: var(--color-primary);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
   }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
 `;
 
 const Nav = () => {
