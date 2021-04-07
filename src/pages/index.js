@@ -12,7 +12,6 @@ const HomePage = ({ data, location }) => {
 
   return (
   <Layout location={location} title={siteTitle}>
-    <Nav />
     <SEO title="All posts" />
     <Bio />
     <p>I should say something clevers about myself here. and render markdown page here.</p>
