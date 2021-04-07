@@ -15,6 +15,11 @@ Can't yet change the name of the [docs folder](https://github.community/t/can-i-
 
 Custom domain is managed through Cloudflare per [Github instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain).
 
+Blog kanban board: https://github.com/kennyklee/blog/projects/1
+History of homepage: https://github.com/kennyklee/blog/wiki/Homepage-History
+Screenshot hosting: https://github.com/kennyklee/myfiles
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
