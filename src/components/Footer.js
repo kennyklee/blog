@@ -9,9 +9,9 @@ const Footer = () => {
       {` `}
       using
       {` `}
-      <a href="https://gitpod.io" target="_blank">Gitpod.io</a> and
+      <a href="https://gitpod.io" target="_blank">Gitpod.io</a> &
       {` `}
-      <a href="https://github.com/kennyklee/blog/projects/1" target="_blank">Github.</a>
+      <a href="https://github.com/kennyklee/blog/projects/1" target="_blank">Github</a>.
     </footer>
   )
 }
