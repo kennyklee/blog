@@ -16,7 +16,6 @@ const HomePage = ({ data, location }) => {
     <SEO title="All posts" />
     <Bio />
     <p>I should say something clevers about myself here. and render markdown page here.</p>
-    <Link to="/blog">Blog</Link>
   </Layout>
   )
 }
