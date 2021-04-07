@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Footer from "./Footer"
 import Nav from "./Nav"
+import GlobalStyles from "../styles/GlobalStyles"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -24,6 +25,7 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <GlobalStyles />
       <header className="global-header">{header}</header>
       <Nav />
       <main>{children}</main>
