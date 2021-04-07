@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Nav from "../components/nav"
+import Bio from "../components/Bio"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import Nav from "../components/Nav"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
