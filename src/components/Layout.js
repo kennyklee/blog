@@ -26,8 +26,8 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <GlobalStyles />
-      <header className="global-header">{header}</header>
       <Nav />
+      <header className="global-header">{header}</header>
       <main>{children}</main>
       <Footer />
     </div>
