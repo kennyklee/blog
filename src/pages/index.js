@@ -1,17 +1,17 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
 
   return (
   <Layout location={location} title={siteTitle}>
-    <SEO title="All posts" />
+    <Seo title="All posts" />
     <Bio />
     <b>April 2021</b>
     <p>I am currently learning how to create this site using <a href="https://gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a> and <a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a>.</p>
