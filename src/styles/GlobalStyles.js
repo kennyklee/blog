@@ -327,7 +327,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     margin-left: calc(100vw - 100%); // prevents from jumping
-  } 
+  }
 
   body::-webkit-scrollbar {
     width: 10px;
