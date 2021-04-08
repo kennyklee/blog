@@ -53,7 +53,7 @@ const Nav = () => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="https://notes.kennylee.com" target="_blank">Notes</a>
+          <a href="https://notes.kennylee.com" target="_blank" rel="noreferrer">Notes</a>
         </li>
       </ul>
   </NavStyles>
