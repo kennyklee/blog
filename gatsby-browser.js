@@ -1,5 +1,5 @@
 import * as React from "react"
-import { GlobalStyles } from "./src/styles/GlobalStyles"
+import { GlobalStyles } from "./src/styles/GlobalStyles" //styled-components
 
 // custom typefaces
 import "typeface-montserrat"
@@ -12,9 +12,9 @@ import "./src/styles/normalize.css"
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
 
-export const wrapPageElement = ({ element }) => (
+export const wrapPageElement = ({ element }) => {
   <>
     <GlobalStyles />
     {element}
   </>
-);
+};
