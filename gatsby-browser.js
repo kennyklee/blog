@@ -1,3 +1,6 @@
+import * as React from "react"
+import { GlobalStyles } from "./src/styles/GlobalStyles"
+
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
@@ -5,7 +8,13 @@ import "typeface-merriweather"
 import "./src/styles/normalize.css"
 // custom CSS styles
 // import "./src/styles/style.css"
-import GlobalStyles from "./src/styles/GlobalStyles"
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
+
+export const wrapPageElement = ({ element }) => (
+  <>
+    <GlobalStyles />
+    {element}
+  </>
+);
