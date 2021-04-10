@@ -6,7 +6,8 @@ import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
 const md = (data) => {
-  const {frontmatter, html} = data.data.allMarkdownRemark.edges[0].node
+  const {html} = data.data.allMarkdownRemark.edges[0].node
+  //const {frontmatter} = data.data.allMarkdownRemark.edges[0].node
 
   return (
     <div>

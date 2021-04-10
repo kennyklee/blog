@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Footer from "./Footer"
 import Nav from "./Nav"
 import GlobalStyles from "../styles/GlobalStyles"
