@@ -3,7 +3,10 @@ import { Link } from "gatsby"
 import styled from "styled-components" 
 
 const NavStyles = styled.nav`
-  margin-bottom: 2.4rem;
+  font-family: var(--font-heading);
+  font-weight: var(--fontWeight-bold);
+  color: var(--color-heading);
+  margin-bottom: 1rem;
   ul {
     margin: 0;
     padding: 0;
