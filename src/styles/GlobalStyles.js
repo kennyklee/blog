@@ -292,10 +292,11 @@ const GlobalStyles = createGlobalStyle`
 
   .bio {
     display: flex;
-    margin-bottom: var(--spacing-16);
+    margin-bottom: var(--spacing-4);
   }
 
   .bio p {
+    margin-top: var(--spacing-3);
     margin-bottom: var(--spacing-0);
   }
 
