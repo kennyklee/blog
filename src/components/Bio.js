@@ -41,6 +41,9 @@ const Bio = () => {
         height={50}
         quality={50}
         alt="Profile picture"
+        placeholder="none"
+        backgroundColor="white"
+        loading="eager"
       />
       {author?.name && (
         <p>
