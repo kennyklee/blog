@@ -1,12 +1,12 @@
 ---
-title:  "Reason Why I'm Fundraising & Training"
+title: "Reason Why I'm Fundraising & Training"
 layout: Post
-date:   2011-12-13 10:18:00
+date: 2011-12-13 10:18:00
 description: My story as a cancer survior.
 tags:
-    - personal
+  - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: publish
+status: draft
 ---
 
 Almost 7 years ago, I was diagnosed with cancer…Non-Hodgkin's Lymphoma.
@@ -19,9 +19,9 @@ I am sharing this story because fight for cancer is a battle we have not yet won
 
 Here are some stats around blood-based cancers (Leukemia, Lymphoma, and Myeloma) in America:
 
-* Every 4 minutes, an American is diagnosed with blood cancer
-* Every 10 minutes, this disease takes the life of an individual
-* Leukemia is the most common type of blood cancer in children
+- Every 4 minutes, an American is diagnosed with blood cancer
+- Every 10 minutes, this disease takes the life of an individual
+- Leukemia is the most common type of blood cancer in children
 
 After 5 years of being cancer-free, I promised myself to participate in LLS and Team in Training event to celebrate my 5-year survival mark, and also contribute to the cause for a cure.
 

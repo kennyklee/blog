@@ -6,7 +6,7 @@ description: Getting nervous.
 tags:
   - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: publish
+status: draft
 ---
 
 Less than a week until the triathlon in Hawaii…
