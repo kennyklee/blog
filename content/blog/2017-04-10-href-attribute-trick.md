@@ -2,17 +2,17 @@
 title: "href attribute 'do nothing' trick"
 layout: Post
 tags:
-    - technology
+  - technology
 keywords: [html, code]
 date: 2017-04-10 00:13:21
-status: publish
+status: draft
 ---
 
 I learned this trick from Chris Coyier was speaking at [Event Apart Seattle 2017](https://aneventapart.com/event/seattle-2017#chris-coyier).
 
 It's a common practice to set the anchor element's href to `#`, when you don't want anything to happen when user click on the link.
 
-``` javascript
+```javascript
 <a href="#">Click here</a>
 ```
 
@@ -20,7 +20,7 @@ However, some browsers may jump (usually to the top of the page), when users cli
 
 So, here is a cool trick...use `#0` instead.
 
-``` javascript
+```javascript
 <a href="#0">Click here</a>
 ```
 
@@ -42,10 +42,6 @@ After digging a little bit, it turn out that [HTML4 specs](https://www.w3.org/TR
 
 ### Other variations:
 
-* `<a href="#!">Click here</a>`
-* `<a href="#void">Click here</a>`
-* Came across using `javascript:void(0)` in [Stackoverflow](http://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0), but that is some ugly code. I don't wanna use it.
-
-
-
-
+- `<a href="#!">Click here</a>`
+- `<a href="#void">Click here</a>`
+- Came across using `javascript:void(0)` in [Stackoverflow](http://stackoverflow.com/questions/134845/which-href-value-should-i-use-for-javascript-links-or-javascriptvoid0), but that is some ugly code. I don't wanna use it.
