@@ -1,10 +1,24 @@
 ---
 title: "Homepage"
 layout: Post
-date: 2021-04-10 00:00:00
+date: 2022-08-21 00:00:00
 status: home
 ---
 
-I am currently learning how to create this site using <a href="https://gatsbyjs.com" target="_blank" rel="noreferrer">Gatsby</a> and <a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a>.</p>
+Hello and welcome.<br>Here is some information about me.
 
-<p>I'm using <a href="https://gitpod.io" target="_blank" rel="noreferrer">Gitpod.io</a> as a cloud IDE, and <a href="https://github.com/kennyklee/blog/projects/1" target="_blank" rel="noreferrer">Github</a> to serve static pages. Not having a local development environment on a computer and using <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">VSCode</a> to code in the cloud is amazing.</p>
+I am working on a mission to regenerate healthy soil at a planetary scale at <a href="https://aigen.io" target="_blank" rel="noreferrer">Aigen</a>. We are using robotics and artificial intelligence to help farmers work and grow sustainably and regeneratively.
+
+I'm also learning how to be a sustainable organic farmer at <a href="https://vivafarms.org/practicum-in-sustainable-agriculture-2/" target="_blank" rel="noreferrer">Viva Farms</a> in Woodinville, WA.
+
+Previously, I co-founded Weblife, a cybersecurity company focused on striking a balance between security and privacy. It was acquired by <a href="http://proofpoint.com/" target="_blank" rel="noreferrer">Proofpoint</a>. Before that, I worked for Bank of America and Deloitte, protecting people and companies in the digital world.
+
+I enjoy spending my non-working hours with my life partner and 2 kids.
+
+**Journey Map:** Seoul, Staten Island, Brooklyn, Durham, Guam, East Lansing, Troy, Los Angeles, Seattle
+
+**Socials:** <a href="https://www.linkedin.com/in/kennyklee/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://www.instagram.com/kennyklee/" target="_blank" rel="noreferrer">Instagram</a>
+
+
+***
+
