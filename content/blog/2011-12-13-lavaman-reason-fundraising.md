@@ -6,7 +6,7 @@ description: My story as a cancer survior.
 tags:
   - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: draft
+status: publish
 ---
 
 Almost 7 years ago, I was diagnosed with cancer…Non-Hodgkin's Lymphoma.

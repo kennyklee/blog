@@ -6,7 +6,7 @@ description: Race to find a cure.
 tags:
   - personal
 keywords: [marathon, team in training, tnt, lls]
-status: draft
+status: publish
 ---
 
 The original blog about my experience as cancer survior and training for my very first marathon is [here][tntblog].

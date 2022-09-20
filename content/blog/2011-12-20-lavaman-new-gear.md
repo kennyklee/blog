@@ -6,7 +6,7 @@ description: New toys, new experiences.
 tags:
   - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: draft
+status: publish
 ---
 
 ### Countdown: 15 weeks to race day.

@@ -6,7 +6,7 @@ description: Getting close!
 tags:
   - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: draft
+status: publish
 ---
 
 ### Countdown: 11 weeks to race day

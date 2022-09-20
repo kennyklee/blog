@@ -6,7 +6,7 @@ description: Thank you for the support!
 tags:
   - personal
 keywords: [lavaman, team in training, tnt, lls]
-status: draft
+status: publish
 ---
 
 ### Fundraising
