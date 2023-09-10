@@ -56,7 +56,7 @@ const Nav = () => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="https://notes.kennylee.com" target="_blank" rel="noreferrer">Notes</a>
+          <a href="https://publish.obsidian.md/kenny/about/" target="_blank" rel="noreferrer">Notes</a>
         </li>
       </ul>
   </NavStyles>
